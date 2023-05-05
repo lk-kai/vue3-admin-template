@@ -5,6 +5,7 @@ import NotFound from '~/view/NotFount/NotFound.vue'
 import admin from '~/layouts/admin.vue'
 import index from '~/view/Index/index.vue'
 import goodsList from '~/view/goods/list.vue'
+import dataScreen from '~/view/dataScreen/dataScreen.vue'
 
 const routes = [
   {
@@ -19,7 +20,14 @@ const routes = [
     meta: {
       title: '登录'
     }
-
+  },
+  {
+    path: '/dataScreen',
+    name: 'dataScreen',
+    component: dataScreen,
+    meta: {
+      title: '大屏'
+    }
   },
   { path: '/:pathMatch(.*)*',
     name: 'NotFound',
@@ -56,7 +64,6 @@ export const router = createRouter({
 export const addRoutes = (menus) => {
   const findAndAddRouteForMenus = (arr) => {
     arr.forEach(e => {
-
       let item = asyncRoutes.find(o => o.path === e.frontpath )
       if (item && !router.hasRoute(item.path)) {
         router.addRoute('Admin',item)

@@ -4,6 +4,7 @@ import {getToken} from '~/utils/auth.js'
 const instance = axios.create({
   timeout: 5000,
   baseURL: 'https://www.fastmock.site/mock/268db58ddfe565c9e0e6c51294f19ae2/test'
+  // baseURL: '/api'
 })
 
 // 当前正在请求的数量

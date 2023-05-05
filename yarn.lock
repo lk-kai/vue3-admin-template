@@ -908,6 +908,11 @@ vue-router@^4.1.6:
     "@vue/server-renderer" "3.2.47"
     "@vue/shared" "3.2.47"
 
+vue3-scale-box@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.npmmirror.com/vue3-scale-box/-/vue3-scale-box-0.1.6.tgz"
+  integrity sha512-FWOXOa0Yc3j8OP9VjjX159OH4H5dY5maKn68KwLatCzp15s+r2KON7uuTdGUViAkMwmdqWTE8BCEn7DEEf6H0w==
+
 whatwg-encoding@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmmirror.com/whatwg-encoding/-/whatwg-encoding-2.0.0.tgz"
