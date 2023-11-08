@@ -1,9 +1,9 @@
 <template>
   <transition name="fade" appear>
     <el-row class="min-h-screen">
-      <el-col :span="16" class="left flex justify-center items-center bg-login-bg bg-no-repeat bg-cover bg-center">
+      <el-col :span="16" class="flex items-center justify-center bg-cover bg-center bg-no-repeat left bg-login-bg">
       </el-col>
-      <el-col :span="8" class="right bg-light-50 flex justify-center items-center flex-col">
+      <el-col :span="8" class="flex flex-col items-center justify-center right bg-light-50 b">
         <el-form
           :model="form"
           :rules="rules"
@@ -34,7 +34,7 @@
 </template>
 
 <script setup>
-import {onBeforeUnmount, onMounted, reactive, ref} from 'vue'
+import {onBeforeUnmount, onMounted, reactive, ref, toRef, toRefs} from 'vue'
 import {Lock, User} from '@element-plus/icons-vue'
 import {getInfo, login} from '~/api/manager.js'
 import {ElNotification} from 'element-plus'
@@ -45,7 +45,6 @@ const form = reactive({
   username: 'admin',
   password: 'admin'
 })
-
 const rules = {
   username: [
     {
